@@ -1,0 +1,2 @@
+﻿CREATE TABLE employe (employe_id varchar(50) primary key, employe_nom varchar(50), employe_prenom varchar(50), employe_date_naissance date, employe_date_embauche date, employe_adresse varchar(255), employe_email varchar(50), employe_telephone varchar(20));
+CREATE TABLE compte (compte_login varchar(50) NOT NULL, compte_password varchar(50) NOT NULL, compte_actif bool,compte_role int,employe_id varchar(50),constraint pk_compte PRIMARY KEY (compte_login,compte_password),constraint fk_compte_employe foreign key(employe_id)references employe(employe_id));
