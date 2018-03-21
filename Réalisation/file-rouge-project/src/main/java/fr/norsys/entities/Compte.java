@@ -5,7 +5,7 @@ public class Compte {
 	private String login;
 	private Employe employe;
 	private String password;
-	private boolean actif;
+	private Boolean actif;
 	private AccessType role;
 	public Compte() {
 		super();
@@ -36,10 +36,10 @@ public class Compte {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public boolean isActif() {
+	public Boolean isActif() {
 		return actif;
 	}
-	public void setActif(boolean actif) {
+	public void setActif(Boolean actif) {
 		this.actif = actif;
 	}
 	public AccessType getRole() {

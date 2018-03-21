@@ -1,5 +1,7 @@
 package fr.norsys.services.impl;
 
+import java.sql.SQLException;
+
 import fr.norsys.dao.CompteDao;
 import fr.norsys.dao.EmployeDao;
 import fr.norsys.dao.impl.CompteDaoImpl;
@@ -14,13 +16,13 @@ public class CompteServiceImpl implements CompteService {
 	private EmployeDao employeDao = new EmployeDaoImpl();
 	
 	@Override
-	public boolean addCompte(String login, String password, boolean actif, AccessType role,String employeId) {
+	public boolean addCompte(String login, String password, boolean actif, AccessType role,String employeId)throws SQLException {
 		
 		return dao.addCompte(new Compte(login,employeDao.getById(employeId),password,actif,role));
 	}
 
 	@Override
-	public Compte getCompteByLoginAndPassword(String login, String password) {
+	public Compte getCompteByLoginAndPassword(String login, String password)throws SQLException {
 		return dao.getByLoginAndPassword(login, password);
 	}
 

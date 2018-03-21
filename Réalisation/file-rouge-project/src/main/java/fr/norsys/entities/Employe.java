@@ -30,17 +30,7 @@ public class Employe {
 		this.email = email;
 		this.telephone = telephone;
 	}
-	public Employe(String nom, String prenom, LocalDate dateNaissance, LocalDate dateEmbauche, String adresse,
-			String email, String telephone) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.dateNaissance = dateNaissance;
-		this.dateEmbauche = dateEmbauche;
-		this.adresse = adresse;
-		this.email = email;
-		this.telephone = telephone;
-	}
+	
 	public Compte getCompte() {
 		return compte;
 	}

@@ -7,7 +7,6 @@ import java.util.Properties;
 public class DBConfiguration {
 
 	Properties prop = new Properties();
-	InputStream input = null;
 
 	public DBConfiguration() {
 		try {

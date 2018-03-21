@@ -2,7 +2,12 @@ package fr.norsys.utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLType;
+import java.sql.Types;
+import java.util.List;
 
 public class DbConnection {
 
@@ -24,7 +29,7 @@ public class DbConnection {
 	public Connection getConnection() {
 		// TODO : Remplacer null avec Optional
 		try {
-			Class.forName("org.postgresql.Driver");
+			Class.forName(dbConfiguration.get("db.driver"));
 			connection = DriverManager.getConnection(dbConfiguration.get("db.url"),dbConfiguration.get("db.username") ,dbConfiguration.get("db.password"));
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -47,5 +52,6 @@ public class DbConnection {
 			e.printStackTrace();
 		}
 	}
+	
 	
 }

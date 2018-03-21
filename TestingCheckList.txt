@@ -1,0 +1,4 @@
+EmployeDao
+----------
+1-Ajouter un employé et s'assurer qu'il s'est ajouté en verifiant ses informations après les avoir récuperer de la base
+2-
