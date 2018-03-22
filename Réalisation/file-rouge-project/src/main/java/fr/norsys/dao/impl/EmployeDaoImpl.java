@@ -63,7 +63,7 @@ public class EmployeDaoImpl implements EmployeDao {
 		Statement statement = dbConnection.getConnection().createStatement();
 		ResultSet resultSet = statement.executeQuery("select * from employe ;");
 
-		if (resultSet.next()) {
+		while (resultSet.next()) {
 			Employe employe = new Employe();
 			employe.setId(resultSet.getString("employe_id"));
 			employe.setNom(resultSet.getString("employe_nom"));
